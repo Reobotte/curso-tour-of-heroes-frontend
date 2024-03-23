@@ -20,7 +20,9 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeros();
+    // subscribe -> quero ser noticado das mudaças da lista
+    this.heroService.getHeros().subscribe(hereos =>
+      this.heroes = hereos);
   }
 
   onSelect(hero: Hero): void {
