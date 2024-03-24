@@ -4,7 +4,7 @@
   <li
     *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero">
-    <button (click)="onSelect(hero)">
+    <button mat-raised-button (click)="onSelect(hero)">
       <span>{{ hero.id }}</span> {{ hero.name }}
     </button>
   </li>
