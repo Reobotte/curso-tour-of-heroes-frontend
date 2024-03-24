@@ -8,7 +8,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-WDF32WIX.js";
+} from "./chunk-OBTO5HN6.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_ID,
@@ -71,7 +71,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-K733Z6CI.js";
+} from "./chunk-BRHDWSY7.js";
 import {
   Observable,
   __async,
@@ -86,7 +86,7 @@ import {
   of,
   switchMap,
   tap
-} from "./chunk-SXIXOCJ4.js";
+} from "./chunk-Y6TW5IJN.js";
 
 // node_modules/@angular/common/fesm2022/http.mjs
 var HttpHandler = class {
@@ -4011,6 +4011,7 @@ var makeStateKey2 = makeStateKey;
 var TransferState2 = TransferState;
 
 export {
+  HttpClient,
   BrowserDomAdapter,
   BrowserGetTestability,
   EVENT_MANAGER_PLUGINS,
@@ -4064,4 +4065,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-XOLZQLGF.js.map
+//# sourceMappingURL=chunk-XZUAWPZ5.js.map
