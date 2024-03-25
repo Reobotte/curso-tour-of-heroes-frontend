@@ -28,8 +28,9 @@ function coerceElement(elementOrRef) {
 export {
   coerceBooleanProperty,
   coerceNumberProperty,
+  _isNumberValue,
   coerceArray,
   coerceCssPixelValue,
   coerceElement
 };
-//# sourceMappingURL=chunk-JKWMRJXN.js.map
+//# sourceMappingURL=chunk-43B6TRUC.js.map

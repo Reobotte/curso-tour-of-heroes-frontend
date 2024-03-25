@@ -57,12 +57,12 @@ import {
   validateBasis
 } from "./chunk-7Y3UJM6Q.js";
 import {
+  coerceBooleanProperty
+} from "./chunk-43B6TRUC.js";
+import "./chunk-VMZBWUIT.js";
+import {
   DomSanitizer
 } from "./chunk-G6NYDFHI.js";
-import {
-  coerceBooleanProperty
-} from "./chunk-JKWMRJXN.js";
-import "./chunk-VMZBWUIT.js";
 import {
   NgClass,
   NgStyle,
