@@ -1,9 +1,9 @@
 import {
-  SelectionModel
-} from "./chunk-F2EMW7O4.js";
-import {
   NG_VALUE_ACCESSOR
 } from "./chunk-WJUDUU5Y.js";
+import {
+  SelectionModel
+} from "./chunk-F2EMW7O4.js";
 import {
   A,
   CdkObserveContent,

@@ -1,4 +1,7 @@
 import {
+  DomSanitizer
+} from "./chunk-G6NYDFHI.js";
+import {
   BREAKPOINT,
   BREAKPOINTS,
   BREAKPOINT_PRINT,
@@ -60,9 +63,6 @@ import {
   coerceBooleanProperty
 } from "./chunk-43B6TRUC.js";
 import "./chunk-VMZBWUIT.js";
-import {
-  DomSanitizer
-} from "./chunk-G6NYDFHI.js";
 import {
   NgClass,
   NgStyle,
