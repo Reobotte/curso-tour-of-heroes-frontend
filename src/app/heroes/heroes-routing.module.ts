@@ -4,8 +4,8 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 
 const routes: Routes = [
-  { path: 'heroes/:id', component: HeroDetailComponent },
-  { path: 'heroes', component: HeroesComponent }
+  { path: '', component: HeroesComponent },
+  { path: ':id', component: HeroDetailComponent },
 ];
 
 @NgModule({

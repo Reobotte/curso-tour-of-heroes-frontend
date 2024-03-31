@@ -10,9 +10,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 
-import { DashboardModule } from './dashboard/dashboard.module';
-import { HeroesModule } from './heroes/heroes.module';
-
 @NgModule({
   declarations: [ AppComponent ],
   imports: [
@@ -22,9 +19,9 @@ import { HeroesModule } from './heroes/heroes.module';
     BrowserAnimationsModule,
     // ReactiveFormsModule,
 
-    // feature
-    DashboardModule,
-    HeroesModule,
+    // // feature
+    // DashboardModule,
+    // HeroesModule,
 
     // app
     AppRoutingModule,

@@ -3,8 +3,7 @@ import { MessageService } from "../../services/message.service";
 
 @Component({
   selector: 'app-messages',
-  templateUrl: './messages.component.html',
-  styleUrl: './messages.component.css'
+  templateUrl: './messages.component.html'
 })
 export class MessagesComponent {
   constructor(public messageService: MessageService) {}

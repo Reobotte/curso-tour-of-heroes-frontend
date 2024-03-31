@@ -5,6 +5,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { FormsModule } from '@angular/forms';
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HeroesRoutingModule } from './heroes-routing.module';
   imports: [
     FormsModule,
     CommonModule,
+    FlexLayoutModule,
     MaterialModule,
     HeroesRoutingModule
   ]
