@@ -1,4 +1,7 @@
 import {
+  NG_VALUE_ACCESSOR
+} from "./chunk-WJUDUU5Y.js";
+import {
   SelectionModel
 } from "./chunk-F2EMW7O4.js";
 import {
@@ -22,9 +25,6 @@ import {
   coerceNumberProperty
 } from "./chunk-43B6TRUC.js";
 import "./chunk-VMZBWUIT.js";
-import {
-  NG_VALUE_ACCESSOR
-} from "./chunk-WJUDUU5Y.js";
 import {
   CommonModule,
   NgTemplateOutlet
