@@ -19,15 +19,28 @@ export class HeroDetailComponent implements OnInit {
     private route: ActivatedRoute) { }
 
     ngOnInit(): void {
-      this.getHero();
+      this.get();
     }
 
-    getHero() {
+    get() {
       const id = Number(this.route.snapshot.paramMap.get('id'));
-      this.heroService.getHero(id).subscribe((hero) => (this.hero = hero));
+      this.heroService
+        .get(id)
+        .subscribe((hero) => (this.hero = hero));
     }
 
     goBack() {
       this.location.back();
     }
+
+    salvar() {
+      this.heroService
+        .updateHero(this.hero)
+        .subscribe(() => this.goBack());
+    }
+
+    isFormValid(): boolean {
+      return !! this.hero.name.trim();
+    }
+
 }
