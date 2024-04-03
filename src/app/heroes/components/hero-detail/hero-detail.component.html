@@ -1,41 +1,52 @@
+<h1>{{ isEditing ? "update" : ("create" | uppercase) }} Héroi</h1>
 
-  <h1>{{ isEditing ? "update" : "create" | uppercase }} Héroi</h1>
+<!-- <h1>{{ hero.name | uppercase }} Detalhes</h1> -->
 
-  <h1>{{ hero.name | uppercase }} Detalhes</h1>
-
+<form [formGroup]="form" novalidate>
   <mat-card>
-
     <mat-card-content fxLayout="column">
       <mat-form-field *ngIf="isEditing">
         <mat-label>ID</mat-label>
-        <input matInput disabled [value]="hero.id">
+        <input
+          matInput
+          formControlName="id" />
       </mat-form-field>
+
       <mat-form-field>
         <mat-label>NOME</mat-label>
         <input
           matInput
           id="name"
-          [(ngModel)]="hero.name"
+          formControlName="name"
           placeholder="Nome"
-          type="text">
+          type="text" />
+        <mat-error *ngIf="form.controls['name'].hasError('required')">
+          O Nome é obrigatório!
+        </mat-error>
+        <mat-error *ngIf="form.controls['name'].hasError('minlength')">
+          Mínimo 3 caractes!
+        </mat-error>
       </mat-form-field>
     </mat-card-content>
 
     <mat-card-actions>
       <button
         color="primary"
-        [disabled]="!isFormValid()"
         *ngIf="!isEditing"
         mat-raised-button
-        (click)="create()">Criar</button>
+        (click)="create()"
+      >
+        Criar
+      </button>
       <button
         color="primary"
-        [disabled]="!isFormValid()"
         *ngIf="isEditing"
         mat-raised-button
-        (click)="update()">Atualizar</button>
+        (click)="update()"
+      >
+        Atualizar
+      </button>
       <button mat-raised-button (click)="goBack()">Retornar</button>
     </mat-card-actions>
-
   </mat-card>
-
+</form>

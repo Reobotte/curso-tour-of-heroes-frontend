@@ -22,14 +22,18 @@ export class HeroService {
   getAll(): Observable<Hero[]> {
     return this.http
       .get<Hero[]>(this.heroesUrl)
-      .pipe(tap((heroes) => this.log(`recebido: ${heroes.length} Heroes!`)));
+      .pipe(
+        tap((heroes) => this.log(`recebido: ${heroes.length} Heroes!`))
+      );
   }
 
   // GET heros/id
   get(id: number): Observable<Hero> {
     return this.http
       .get<Hero>(`${this.heroesUrl}/${id}`)
-      .pipe(tap((hero) => this.log(`recebido: ${this.descAttibutes(hero)}`)));
+      .pipe(
+        tap((hero) => this.log(`recebido: ${this.descAttibutes(hero)}`))
+      );
   }
 
   // POST /heroes

@@ -1,5 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 // import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -17,18 +16,17 @@ import { CoreModule } from './core/core.module';
   imports: [
     // @angular
     BrowserModule,
-    FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     // ReactiveFormsModule,
 
+    CoreModule,
     // // feature
     // DashboardModule,
     // HeroesModule,
 
     // app
-    AppRoutingModule,
-    CoreModule
+    AppRoutingModule
   ],
   providers: [
     // provideAnimationsAsync()
