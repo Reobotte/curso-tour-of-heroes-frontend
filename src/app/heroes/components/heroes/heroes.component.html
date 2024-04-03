@@ -1,5 +1,12 @@
 <h1>Meus Herois</h1>
 
+<button
+  class="add-button"
+  color="accent"
+  mat-fab routerLink="new">
+    <mat-icon>add</mat-icon>
+</button>
+
 <mat-table [dataSource]="heroes" class="mat-elevation-z8">
   <!-- ud -->
   <ng-container matColumnDef="id">

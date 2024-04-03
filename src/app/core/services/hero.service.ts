@@ -22,14 +22,23 @@ export class HeroService {
   getAll(): Observable<Hero[]> {
     return this.http
       .get<Hero[]>(this.heroesUrl)
-      .pipe(tap((heroes) => this.log(`recebido: ${heroes.length} hérois!`)));
+      .pipe(tap((heroes) => this.log(`recebido: ${heroes.length} Heroes!`)));
   }
 
   // GET heros/id
   get(id: number): Observable<Hero> {
     return this.http
       .get<Hero>(`${this.heroesUrl}/${id}`)
-      .pipe(tap((hero) => this.log(`recebido héroi id: ${id} - nome: ${hero.name}!`)));
+      .pipe(tap((hero) => this.log(`recebido: ${this.descAttibutes(hero)}`)));
+  }
+
+  // POST /heroes
+  create(hero: Hero): Observable<Hero> {
+    return this.http
+      .post<Hero>(this.heroesUrl, hero)
+      .pipe(
+        tap((hero) => this.log(`Criando: ${this.descAttibutes(hero)}`))
+      )
   }
 
   // PUT /heroes/id
@@ -37,8 +46,12 @@ export class HeroService {
     return this.http
       .put<Hero>(`${this.heroesUrl}/${hero.id}`, hero)
       .pipe(
-        tap((hero) => this.log(`Atualizado Héroi id: ${hero.id} - nome: ${hero.name}!`))
+        tap((hero) => this.log(`Atualizado: ${this.descAttibutes(hero)}`))
       );
+  }
+
+  private descAttibutes(hero: Hero): string {
+    return `Herói id: ${hero.id} - nome: ${hero.name}!`;
   }
 
   private log(message: string): void {

@@ -1,8 +1,8 @@
+import { Location } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
-import { HeroService } from "../../../core/services/hero.service";
 import { ActivatedRoute } from "@angular/router";
 import { Hero } from "../../../core/models/hero";
-import { Location } from "@angular/common";
+import { HeroService } from "../../../core/services/hero.service";
 
 @Component({
   selector: 'app-hero-detail',
@@ -12,6 +12,7 @@ import { Location } from "@angular/common";
 export class HeroDetailComponent implements OnInit {
 
   hero!: Hero;
+  isEditing!: boolean;
 
   constructor(
     private heroService: HeroService,
@@ -23,17 +24,31 @@ export class HeroDetailComponent implements OnInit {
     }
 
     get() {
-      const id = Number(this.route.snapshot.paramMap.get('id'));
-      this.heroService
-        .get(id)
-        .subscribe((hero) => (this.hero = hero));
+      const paramId = this.route.snapshot.paramMap.get('id');
+
+      if (paramId === 'new') {
+          this.isEditing = false;
+          this.hero = { name: ''} as Hero;
+        } else {
+          this.isEditing = true;
+          const id = Number(paramId);
+          this.heroService
+          .get(id)
+          .subscribe((hero) => (this.hero = hero));
+      }
     }
 
     goBack() {
       this.location.back();
     }
 
-    salvar() {
+    create() {
+      this.heroService
+        .create(this.hero)
+        .subscribe(() => this.goBack());
+    }
+
+    update() {
       this.heroService
         .updateHero(this.hero)
         .subscribe(() => this.goBack());
