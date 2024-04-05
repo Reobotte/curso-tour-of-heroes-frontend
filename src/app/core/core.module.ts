@@ -9,13 +9,15 @@ import { PageNotFoundComponent } from './components/page-not-found.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
-import { HttpErrorInterceptor, httpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { HttpErrorInterceptor } from './interceptors/http-error.interceptor';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 const COMPONENTS = [
   MessagesComponent,
   ToolbarComponent,
   PageNotFoundComponent,
-  LoadingComponent
+  LoadingComponent,
+  ConfirmationDialogComponent
 ];
 
 const MODULES = [
@@ -24,7 +26,7 @@ const MODULES = [
 ];
 
 @NgModule({
-  declarations: [ COMPONENTS ],
+  declarations: [ COMPONENTS,  ],
   imports: [ MODULES, CommonModule ],
   exports: [ MODULES, COMPONENTS ],
   providers: [

@@ -2,14 +2,14 @@ import {
   coerceArray,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-43B6TRUC.js";
+} from "./chunk-PGMACBEX.js";
 import {
   BidiModule
-} from "./chunk-VMZBWUIT.js";
+} from "./chunk-WNWPEAOJ.js";
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-WDF32WIX.js";
+} from "./chunk-YRGXKL3F.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -68,14 +68,12 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-K733Z6CI.js";
+} from "./chunk-557INCZ3.js";
 import {
   BehaviorSubject,
   Observable,
   Subject,
   Subscription,
-  __spreadProps,
-  __spreadValues,
   combineLatest,
   concat,
   debounceTime,
@@ -88,7 +86,11 @@ import {
   take,
   takeUntil,
   tap
-} from "./chunk-SXIXOCJ4.js";
+} from "./chunk-BHBYJEJW.js";
+import {
+  __spreadProps,
+  __spreadValues
+} from "./chunk-QOHD3WUR.js";
 
 // node_modules/@angular/cdk/fesm2022/platform.mjs
 var hasV8BreakIterator;
@@ -4798,6 +4800,8 @@ export {
   Breakpoints,
   AriaDescriber,
   FocusKeyManager,
+  InteractivityChecker,
+  FocusTrapFactory,
   LiveAnnouncer,
   FocusMonitor,
   A11yModule,
@@ -4810,4 +4814,4 @@ export {
   MatPseudoCheckboxModule,
   MatRippleLoader
 };
-//# sourceMappingURL=chunk-2MEQC4FI.js.map
+//# sourceMappingURL=chunk-RPIETXLC.js.map
